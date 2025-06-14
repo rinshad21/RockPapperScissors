@@ -40,8 +40,8 @@ function playGame(playerChoice) {
     }
     //update display text for result&choice
 
-    playerDisplay.textContent = `player: ${playerChoice}`;
-    ComputerDisplay.textContent = `computer: ${computerChoice}`;
+    playerDisplay.textContent = `Player: ${playerChoice}`;
+    ComputerDisplay.textContent = `Computer: ${computerChoice}`;
     resultDisplay.textContent = result;
 
     //using switch statement to change color of result and add score by 1
@@ -68,7 +68,7 @@ function playGame(playerChoice) {
     //updating the score ro local storge after every round
     updateScore();
     localStorage.setItem('playerScore', playerScore.toString());
-    localStorage.setItem('ComputerScore', computerScore.toString());
+    localStorage.setItem('computerScore', computerScore.toString());
 }
     //creating function for reset
     function resetGame() {
@@ -76,11 +76,11 @@ function playGame(playerChoice) {
         computerScore = 0;
         updateScore();
         localStorage.setItem('playerScore', playerScore.toString());
-        localStorage.setItem('ComputerScore', computerScore.toString());
+        localStorage.setItem('computerScore', computerScore.toString());
 
         //clearing for reset
         playerscoreDisplay.textContent =  0;
         computerScoreDisplay.textContent = 0;
         resultDisplay.textContent = "";
-        resultDisplay.classList.remove("win", "lost", "draw");
     }
+
