@@ -6,8 +6,8 @@ const resultDisplay = document.getElementById("resultDisplay");
 const playerscoreDisplay = document.getElementById("playerScoreDisplay");
 const computerScoreDisplay = document.getElementById("computerScoreDisplay");
 //assigning intial score as 0
-let playerScore = parseInt(localStorage.getItem('playerscore'))||0
-let computerScore = parseInt(localStorage.getItem('computerScore'))||0
+let playerScore = parseInt(localStorage.getItem('playerScore')) || 0;
+let computerScore = parseInt(localStorage.getItem('computerScore')) || 0;
 function updateScore() {
     playerscoreDisplay.textContent = playerScore;
     computerScoreDisplay.textContent = computerScore;
@@ -82,4 +82,5 @@ function playGame(playerChoice) {
         playerscoreDisplay.textContent =  0;
         computerScoreDisplay.textContent = 0;
         resultDisplay.textContent = "";
+        resultDisplay.classList.remove("win", "lost", "draw");
     }

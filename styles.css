@@ -67,8 +67,8 @@ header{
 #computerScoreDisplay,.lost{
     color:red;
 }
-button,#choices button{
-    --webkit-tap-highlight-color:transparent;
+*{
+    -webkit-tap-highlight-color:transparent;
 }
 .draw{
     color:blue;
